@@ -1,0 +1,23 @@
+// program to reverse an array
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int arr[5]={1,2,3,5,6},i=0,temp;
+  int arrLen = sizeof(arr)/sizeof(int);
+  
+  
+   while(i >= arrLen-1){
+       temp = arr[i];
+       arr[i] = arr[arrLen-1];
+       arr[arrLen-1] = temp;
+       i++;
+       arrLen--;
+   }
+   for(i=0;i<arrLen;i++){
+       std::cout<<" "<<arr[i]<<" ";
+   }
+     return 0;
+ }
